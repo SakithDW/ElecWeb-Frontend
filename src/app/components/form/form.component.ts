@@ -9,11 +9,14 @@ import {
 import { DivisionService } from '../../_services/division.service';
 import { Division } from '../../Models/division';
 import { FormService } from '../../_services/form.service';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, SweetAlert2Module],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css',
 })
@@ -21,6 +24,7 @@ export class FormComponent implements OnInit {
   private fb = inject(FormBuilder);
   private divisionService = inject(DivisionService);
   private formService = inject(FormService);
+  private router = inject(Router);
   elecForm: FormGroup;
   divisions: Division[] = [];
   constructor() {
@@ -30,10 +34,9 @@ export class FormComponent implements OnInit {
   private initForm(): FormGroup {
     return this.fb.group({
       name: ['', Validators.required],
-      phone:['',Validators.required],
+      phone: ['', Validators.required],
       division: ['', Validators.required],
       reason: ['', Validators.required],
-      
     });
   }
 
@@ -47,7 +50,7 @@ export class FormComponent implements OnInit {
         this.divisions = data;
       },
       error: (error) => {
-        console.error('Error fetching divisions :',error);
+        console.error('Error fetching divisions :', error);
       },
     });
   }
@@ -58,13 +61,27 @@ export class FormComponent implements OnInit {
       this.formService.submitForm(this.elecForm.value).subscribe({
         next: (response) => {
           console.log('Form submitted successfully', response);
-          alert('Form submitted successfully!');
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Saved Successfully",
+            showConfirmButton: false,
+            timer: 2000
+          });
           this.elecForm.reset();
+          setTimeout(() => {
+            this.router.navigate(['/home']);
+          }, 2000); 
         },
         error: (error) => {
-          console.error('Error submitting form', error);
-          alert('Error submitting form. Please try again.');
-        }
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "error occured",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        },
       });
     }
   }
