@@ -1,0 +1,18 @@
+<div class="w-full h-screen">
+  <div class="w-1/2">
+    <form [formGroup]="elecForm">
+        <div>
+          <label class="block text-gray-700">Name</label>
+          <input type="text" formControlName="name" class="w-3/4 mt-1 p-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label>PhoneNo</label>
+          <input type="text" formControlName="contactNo" />
+        </div>
+        <div>
+          <label>Reason</label>
+          <input type="text" formControlName="reason" />
+        </div>
+      </form>
+  </div>
+</div>

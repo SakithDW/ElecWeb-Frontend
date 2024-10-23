@@ -1,0 +1,6 @@
+.hero-container {
+    background-image: url('/src/assets/banner-bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
