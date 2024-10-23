@@ -1,6 +1,6 @@
 .hero-container {
-    background-image: url('/src/assets/banner-bg.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  background-image: url("/assets/banner-img2.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

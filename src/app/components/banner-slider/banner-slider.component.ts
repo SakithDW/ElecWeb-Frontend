@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './banner-slider.component.html',
-  styleUrls: ['./banner-slider.component.css']
+  styleUrls: ['./banner-slider.component.css'],
 })
 export class BannerSliderComponent implements OnInit, OnDestroy {
   currentSlide = 0;
@@ -16,7 +16,8 @@ export class BannerSliderComponent implements OnInit, OnDestroy {
 
   // We'll move image paths to CSS, but keep logo URLs for inline images
   nppLogoUrl: string = 'assets/nppLogo.svg';
-  jjbLogoUrl: string = 'assets/jjb-logo.png';
+  jjbLogoUrl: string = 'assets/npp-logo.svg';
+  candidateUrl: string = 'assets/candidate_img2.png'
 
   ngOnInit() {
     this.startAutoSlide();
@@ -43,7 +44,8 @@ export class BannerSliderComponent implements OnInit, OnDestroy {
   }
 
   prevSlide() {
-    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
   }
 
   goToSlide(index: number) {

@@ -18,11 +18,11 @@
 
 /* Slide-specific background images */
 .slide-1 {
-  background-image: url(/assets/candidate_img1.png);
+  background-image: url(/assets/candidate_img6.png);
 }
 
 .slide-2 {
-  background-image: url(/assets/candidate_img2.png);
+  background-image: url(/assets/candidate_img1.png);
   /* Add a darker overlay for better text readability */
 }
 
