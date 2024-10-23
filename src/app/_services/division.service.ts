@@ -7,7 +7,7 @@ import { Division } from '../Models/division';
   providedIn: 'root',
 })
 export class DivisionService {
-  private apiUrl = 'http://localhost:3000/api/divisions';
+  private apiUrl = 'http://15.235.143.109:5000/api/Election';
 
   constructor(private http: HttpClient) {}
 

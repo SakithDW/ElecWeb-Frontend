@@ -6,13 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FormService {
-  private apiUrl = 'http://localhost:3000/api/form';
+  private apiUrl = 'http://15.235.143.109:5000/api/Election';
 
   constructor(private http: HttpClient) {}
 
   submitForm(formData: any): Observable<any> {
     debugger;
     console.log(JSON.stringify(formData))
-    return this.http.post(`${this.apiUrl}/submit`,formData);
+    return this.http.post(`${this.apiUrl}`,formData);
   }
 }
