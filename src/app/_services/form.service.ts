@@ -8,7 +8,7 @@ import { Response } from '../Models/response';
   providedIn: 'root',
 })
 export class FormService {
-  private apiUrl = 'https://upul.ebill.lk/api/Election';
+  private apiUrl = 'https://upulapi.ebill.lk/api/Election';
 
   constructor(private http: HttpClient) {}
 

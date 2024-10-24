@@ -8,7 +8,7 @@ import { Response } from '../Models/response';
   providedIn: 'root',
 })
 export class DivisionService {
-  private apiUrl = 'http://upul.ebill.lk/api/Election';
+  private apiUrl = 'https://upulapi.ebill.lk/api/Election';
 
   constructor(private http: HttpClient) {}
 
