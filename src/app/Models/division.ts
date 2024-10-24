@@ -1,4 +1,4 @@
 export interface Division {
-  _id: string;
+  id: string;
   divisionName: string;
 }

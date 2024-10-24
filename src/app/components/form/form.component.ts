@@ -46,8 +46,8 @@ export class FormComponent implements OnInit {
 
   private loadDivisions() {
     this.divisionService.getDivision().subscribe({
-      next: (data) => {
-        this.divisions = data;
+      next: (res) => {
+        this.divisions = res.data;
       },
       error: (error) => {
         console.error('Error fetching divisions :', error);
@@ -57,7 +57,6 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     if (this.elecForm.valid) {
-      debugger;
       this.formService.submitForm(this.elecForm.value).subscribe({
         next: (response) => {
           console.log('Form submitted successfully', response);
