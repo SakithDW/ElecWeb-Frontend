@@ -19,15 +19,18 @@
 /* Slide-specific background images */
 .slide-1 {
   background-image: url(/assets/candidate_img6.png);
+  background-position: 15rem;
 }
 
 .slide-2 {
-  background-image: url(/assets/candidate_img1.png);
-  /* Add a darker overlay for better text readability */
+  background-image: url("/assets/candidate_img1.png");
+  background-size: cover;
+  background-position: 20rem 0.25rem;
 }
 
 .slide-3 {
   background-image: url(/assets/candidate_img3.png);
+  background-position: -10rem 1em;
 }
 
 /* Responsive adjustments */
@@ -48,6 +51,21 @@
 /* Optional: Add animation for slide transitions */
 .campaign-slide {
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(81, 10, 44, 0.9),
+    rgba(107, 23, 56, 0.3) 30%,
+    rgba(81, 10, 44, 0.2)
+  );
+  z-index: 1; /* Keep it below the content */
 }
 
 @keyframes fadeIn {

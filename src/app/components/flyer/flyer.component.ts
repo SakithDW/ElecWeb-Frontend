@@ -12,15 +12,15 @@ import { FormService } from '../../_services/form.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-
+import { ElectionFlyerComponent } from '../election-flyer/election-flyer.component';
 @Component({
-  selector: 'app-form',
+  selector: 'app-flyer',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, SweetAlert2Module],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.css',
+  imports: [CommonModule, ReactiveFormsModule, SweetAlert2Module, ElectionFlyerComponent],
+  templateUrl: './flyer.component.html',
+  styleUrl: './flyer.component.css'
 })
-export class FormComponent implements OnInit {
+export class FlyerComponent implements OnInit {
   private fb = inject(FormBuilder);
   private divisionService = inject(DivisionService);
   private formService = inject(FormService);

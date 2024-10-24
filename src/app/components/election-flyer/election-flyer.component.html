@@ -1,0 +1,52 @@
+<!-- election-flyer.component.html -->
+<div class="w-full h-full bg-palette-1-1 relative overflow-hidden">
+  <!-- Grid container for all content -->
+  <div class="grid grid-cols-1 md:grid-cols-8 h-full">
+    <!-- Left side - Image (spans 4 columns on desktop) -->
+    <div class="md:col-span-4 h-[40vh] md:h-full relative">
+      <img
+        [src]="candidate_img1"
+        alt="Candidate Image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Right side content (spans 4 columns on desktop) -->
+    <div class="md:col-span-4 flex flex-col p-2 md:p-4">
+      <!-- Top section with name and party -->
+      <div class="flex-1 flex flex-col items-center justify-center">
+        <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold text-center">
+          රට අනුරට<br />
+          අපි උපුල්ට
+        </h1>
+
+        <!-- Party logo and number -->
+        <div class="flex items-center justify-center gap-4 my-2 md:my-4">
+          <img
+            [src]="party_img"
+            alt="Party Sign"
+            class="h-12 md:h-16 lg:h-20 w-auto"
+          />
+          <span class="text-3xl md:text-4xl lg:text-5xl font-bold">X2</span>
+        </div>
+      </div>
+
+      <!-- Bottom section with details -->
+      <div class="flex-1 flex flex-col justify-center">
+        <div class="space-y-1 md:space-y-2 text-center">
+          <p class="text-base md:text-lg lg:text-xl">නීතිය රජයන රටකට</p>
+          <p class="text-base md:text-lg lg:text-xl">යුක්තිය දිනවන රටකට</p>
+          <p class="text-base md:text-lg lg:text-xl">මාතර උරුමයෙන් උපරිමයකට</p>
+          <p class="text-base md:text-lg lg:text-xl">ජනධිපති නීතිඥ</p>
+          <p class="text-base md:text-lg lg:text-xl">
+            ජාතික ජනබලවේගය ජාතික විධායක සභික
+          </p>
+          <p class="text-xl md:text-2xl lg:text-4xl font-bold my-1 md:my-2">
+            උපුල් කුමාරප්පෙරුම
+          </p>
+          <p class="text-base md:text-lg lg:text-xl">මාතර දිස්ත්‍රික්කයට</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
