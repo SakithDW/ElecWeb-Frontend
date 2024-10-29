@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
-import { FlyerComponent } from './components/flyer/flyer.component';
-import { ElectionFlyerComponent } from './components/election-flyer/election-flyer.component';
+import { DetailsComponent } from './components/details/details.component';
 
 export const routes: Routes = [
   {
@@ -19,5 +18,8 @@ export const routes: Routes = [
     path: 'reg',
     component: FormComponent,
   },
- 
+  {
+    path: 'detail',
+    component: DetailsComponent,
+  },
 ];

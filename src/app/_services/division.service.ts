@@ -8,11 +8,12 @@ import { Response } from '../Models/response';
   providedIn: 'root',
 })
 export class DivisionService {
-  private apiUrl = 'https://upulapi.ebill.lk/api/Election';
+  private apiUrl = 'https://api.upulkumarapperuma.xyz/api/Election';
 
   constructor(private http: HttpClient) {}
 
   getDivision(): Observable<Response<Division[]>> {
     return this.http.get<Response<Division[]>>(this.apiUrl);
   }
+  
 }

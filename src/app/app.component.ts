@@ -5,6 +5,7 @@ import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlyerComponent } from './components/flyer/flyer.component';
 import { ElectionFlyerComponent } from './components/election-flyer/election-flyer.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { ElectionFlyerComponent } from './components/election-flyer/election-fly
     FormComponent,
     FooterComponent,
     FlyerComponent,
-    ElectionFlyerComponent
+    ElectionFlyerComponent,
+    DetailsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
